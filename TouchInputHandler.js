@@ -5,6 +5,8 @@
 * Date: 2014-12-11
 * Time: 06:18 PM
 */
+
+
 function TouchInputHandler(element) {
     this._lastInteractionCoordinates = null;
     InputHandlerBase.call(this, element);
