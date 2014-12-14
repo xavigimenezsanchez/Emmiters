@@ -56,7 +56,7 @@ MouseInputHandler.prototype._onUpDomEvent = function(e) {
 
 /**
  * Override de _onMoveDomElement de InputHandelerBase
- * Mètode que gestiona el que s'ha de fer quan deixem movem 
+ * Mètode que gestiona el que s'ha de fer quan movem 
  * el ratolí. Només dispararà el esdeveniment si tenim
  * polsat el botó del ratolí disparant el listener
  *  _onMoveDomElement de InputHandlerBase
