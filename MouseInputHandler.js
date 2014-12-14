@@ -36,9 +36,9 @@ MouseInputHandler.prototype._attachDomListeners = function() {
  * InputHandlerBase
  * @param e objecte event del DOM
  **/
-MouseInputHandler.prototype._onDownDomElement = function(e) {
+MouseInputHandler.prototype._onDownDomEvent = function(e) {
     this._mouseDown = true;
-    InputHandlerBase.prototype._onDownDomElement.call(this,e); 
+    InputHandlerBase.prototype._onDownDomEvent.call(this,e); 
 };
 
 /**
@@ -74,6 +74,6 @@ MouseInputHandler.prototype._onMoveDomEvent = function(e) {
  * S'encarrega de posar a false la propietat _mouseDown
  * quan el ratolí surt del canvas
  **/
-MouseInputHandler.prototype._onMouseOut = funtion() {
+MouseInputHandler.prototype._onMouseOut = function() {
     this._mouseDown = false;
 }

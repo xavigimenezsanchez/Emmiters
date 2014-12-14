@@ -1,10 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
+	<meta charset="utf-8" />
+	<meta name="viewport"
+		  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"/>
+
+	<style>
+		html, body {
+			overflow: hidden;
+			width: 100%;
+			height: 100%;
+			margin:0;
+			padding:0;
+			border: 0;
+		}
+
+	</style>
+
+	<script src="../utils.js"></script>
+	<script src="../EventEmitter.js"></script>
+	<script src="../InputHandlerBase.js"></script>
+	<script src="../TouchInputHandler.js"></script>
+	<script src="../MouseInputHandler.js"></script>
+	<script src="../InputHandler.js"></script>
+    
+
+	<script src="app.js"></script>
 </head>
 <body>
-    
+<div id="lobby">
+	<canvas id="mainCanvas" width="30" height="30"></canvas>
+</div>
 </body>
 </html>

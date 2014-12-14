@@ -4,4 +4,4 @@
  * Farem servir una classe o una altra
 **/
 
-var InputHander = isTouchDevice() ? TouchInputHandler: MouseInputHandler
+var InputHandler = isTouchDevice() ? TouchInputHandler: MouseInputHandler

@@ -28,12 +28,12 @@ heretar(EventEmitter,InputHandlerBase);
  * ignorant el Multitouch
  * @param e objecte que ha generat el esdeveniment del DOM
  **/
-InputHandlerBase.prototype.getInputCoordinates = function(e) {
+InputHandlerBase.prototype._getInputCoordinates = function(e) {
     var element = this._element;
     var coords = e.targetTouches ? e.targetTouches[0] : e;
     return {
-        x: (coords.pageX || coords.clientX + document.body.scrollLeft) - element.offsetLeft,  
-        y: (coords.pageY || coords.clientY + document.body.scrollTop ) - element.offsetTop
+        x: ((coords.pageX || coords.clientX) + document.body.scrollLeft) - element.offsetLeft,  
+        y: ((coords.pageY || coords.clientY) + document.body.scrollTop ) - element.offsetTop
     };
 };
 
@@ -45,8 +45,8 @@ InputHandlerBase.prototype.getInputCoordinates = function(e) {
  *          *touchstart
  * @param e objecte event del DOM
  **/
-InputHandlerBase.prototype.onDownDomEvent = function(e) {
-    var coords = this._lastMoveCoordinates = this._getInputCoordinates(e);
+InputHandlerBase.prototype._onDownDomEvent = function(e) {
+var coords = this._lastMoveCoordinates = this._getInputCoordinates(e);
     this.emit("down", {x: coords.x, y: coords.y, domEvent: e}); // Dispara el esdeveniment "down"
     this._stopEventIfRequired(e);
 };

@@ -21,6 +21,7 @@ function EventEmitter() {
  * @param listener funció a afegir a la llista de listeners
  */
 
+
 EventEmitter.prototype.addListener = EventEmitter.prototype.on = function(type, listener) {
     if (typeof listener !== "function")
         throw "Listener must be a function"
@@ -73,9 +74,9 @@ EventEmitter.prototype.emit = function(type, event) {
     if (!(this._listeners[type]) && 
        this._listeners[type].length) {
         return;
-    }
+    };
     
-    for (var i = 0; i < this._listeners[type].length) {
-        this._listeners[type][i].apply(this, event);
+    for (var i = 0; i < this._listeners[type].length; i++) {
+        this._listeners[type][i].call(this, event);
     }
 }
