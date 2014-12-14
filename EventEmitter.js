@@ -14,8 +14,8 @@ function EventEmitter() {
 
 
 /**
- * Mètode addListener o on, tots dos noms són vàlids
- * Serveis per afegir una funció como un listener de
+ * Mètode "addListener" o "on", tots dos noms són vàlids
+ * Es fa servir per afegir una funció como un listener de
  * un esdeveniment creat per nosaltres
  * @param type tipus de esdeveniment
  * @param listener funció a afegir a la llista de listeners
