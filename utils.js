@@ -11,3 +11,9 @@ function heretar(pare,fill) {
     fill.prototype.constructor = fill;
 }
 
+function isTouchDevice() {
+return ((window.ontouchstart) ||
+     		(navigator.maxTouchPoints > 0) ||
+     		(navigator.msMaxTouchPoints > 0)) 
+}
+
