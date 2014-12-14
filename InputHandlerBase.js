@@ -16,7 +16,7 @@ function InputHandlerBase(element) {
     this._lastMoveCoordinates = null; // Últim moviment conegut, el fem servir per calcular el delta
     this._moving = false; // flag que indica que hem traspassat el unbral: Si és true es tracta d'un moviment real
     this._moveThreshold = 10; // El valor del umbral en pixels
-    this._spotDomEvents = true; // Per defecte parem la propagació de esdeveniments i el preventDefault
+    this._stopDomEvents = true; // Per defecte parem la propagació de esdeveniments i el preventDefault
         
 }
 

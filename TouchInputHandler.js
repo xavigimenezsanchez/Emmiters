@@ -50,12 +50,14 @@ TouchInputHandler.prototype._onDownDomEvent = function(e) {
  * @param e objecte event del DOM
  **/
 TouchInputHandler.prototype._onUpDomEvent = function(e) {
-    this.emit("up", {
-        x: this._lastInteractionCoordinates.x,
-        y: this._lastInteractionCoordinates.y,
-        moved: this._moving,
-        domEvent: e    
-    });
+    if (this._lastInteractionCoordinates){
+        this.emit("up", {
+            x: this._lastInteractionCoordinates.x,
+            y: this._lastInteractionCoordinates.y,
+            moved: this._moving,
+            domEvent: e    
+        });
+    };
     this._stopEventIfRequired(e);
     this._lastInteractionCoordinates = null;
     this._moving = false;
